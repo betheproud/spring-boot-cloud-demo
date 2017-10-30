@@ -1,0 +1,27 @@
+---
+spring:
+  application:
+    name: discovery-service
+
+server:
+  port: ${PORT:8080}
+
+management:
+  security:
+    enabled: false
+
+eureka:
+  instance:
+    hostname: ${vcap.application.uris[0]:localhost}
+    metadata-map:
+      instance-id: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+    status-page-url-path: ${management.contextPath}/info
+    health-check-url-path: ${management.contextPath}/health
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      default-zone: ${EUREKA_URI:http://localhost:8761/eureka}
+
+

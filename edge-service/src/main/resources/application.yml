@@ -1,0 +1,29 @@
+---
+spring:
+  application:
+    name: edge-service
+
+server:
+  port: ${PORT:8090}
+
+management:
+  security:
+    enabled: false
+
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      default-zone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+      prefer-ip-address: false
+
+zuul:
+  ignored-services: '*'
+  routes:
+    discovery-service:
+      path: /discovery/**
+      url: http://localhost:8080/discovery
+    api-service:
+      path: /api/**
+      url: http://localhost:8081/api

@@ -1,7 +1,7 @@
 ---
 spring:
   application:
-    name: pai-api-service
+    name: api-pay-service
 
 server:
   port: ${PORT:8081}

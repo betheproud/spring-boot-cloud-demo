@@ -15,8 +15,8 @@ public class ApiUserServiceApplication {
         SpringApplication.run(ApiUserServiceApplication.class, args);
     }
 
-    @RequestMapping("/user")
-    public String discovery() {
-        return "Hello from User Api service";
+    @RequestMapping("/message")
+    public String message() {
+        return "Hello from Api User service";
     }
 }

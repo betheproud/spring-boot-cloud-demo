@@ -21,9 +21,13 @@ eureka:
 zuul:
   ignored-services: '*'
   routes:
-    user-api-service:
-      path: /user/**
-      url: http://localhost:8080/user
-    api-service:
-      path: /pay/**
-      url: http://localhost:8081/pay
+    api-user-service: /users/**
+    api-pay-service: /pays/**
+#    api-user-service:
+#      path: /users/**
+#      url: http://localhost:8080/
+#    api-pay-service:
+#      path: /pays/**
+#      url: http://localhost:8081/
+
+

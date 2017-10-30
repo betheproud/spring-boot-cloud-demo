@@ -15,8 +15,8 @@ public class ApiPayServiceApplication {
         SpringApplication.run(ApiPayServiceApplication.class, args);
     }
 
-    @RequestMapping("/pay")
-    public String pay() {
-        return "Hello from Pay Api service";
+    @RequestMapping("/message")
+    public String message() {
+        return "Hello from Api Pay service";
     }
 }

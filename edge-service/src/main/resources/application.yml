@@ -21,9 +21,9 @@ eureka:
 zuul:
   ignored-services: '*'
   routes:
-    discovery-service:
-      path: /discovery/**
-      url: http://localhost:8080/discovery
+    user-api-service:
+      path: /user/**
+      url: http://localhost:8080/user
     api-service:
-      path: /api/**
-      url: http://localhost:8081/api
+      path: /pay/**
+      url: http://localhost:8081/pay

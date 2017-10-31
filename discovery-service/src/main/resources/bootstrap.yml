@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      enabled: true
+      name: discovery-service
+      uri: http://localhost:8888
+
+
+

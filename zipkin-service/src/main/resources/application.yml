@@ -1,14 +1,14 @@
 spring:
   application:
-    name: api-user-service
+    name: zipkin-service
   zipkin:
-    base-url: http://zipkin-service:9441/
+    enabled: true
   sleuth:
-    sampler:
+    smapler:
       percentage: 1.0
 
 server:
-  port: ${port:8082}
+  port: ${port:9411}
 
 management:
   port: ${server.port}
@@ -18,8 +18,7 @@ management:
 eureka:
   client:
     registry-fetch-interval-seconds: 5
-    serviceUrl:
+    service-url:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
   instance:
       prefer-ip-address: false
-

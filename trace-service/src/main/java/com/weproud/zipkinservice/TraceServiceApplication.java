@@ -9,9 +9,9 @@ import zipkin.server.EnableZipkinServer;
 @EnableZipkinServer
 @EnableEurekaClient
 @SpringBootApplication
-public class ZipkinServiceApplication {
+public class TraceServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ZipkinServiceApplication.class, args);
+        SpringApplication.run(TraceServiceApplication.class, args);
     }
 }

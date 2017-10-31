@@ -1,11 +1,6 @@
 spring:
   application:
-    name: zipkin-service
-  zipkin:
-    enabled: true
-  sleuth:
-    smapler:
-      percentage: 1.0
+    name: trace-service
 
 server:
   port: ${port:9411}

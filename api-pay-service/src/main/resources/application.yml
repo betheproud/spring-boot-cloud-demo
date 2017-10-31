@@ -7,7 +7,6 @@ spring:
     sampler:
       percentage: 1.0
 
-
 server:
   port: ${port:8081}
 

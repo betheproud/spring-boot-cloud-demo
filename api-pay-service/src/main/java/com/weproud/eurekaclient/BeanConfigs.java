@@ -14,4 +14,9 @@ public class BeanConfigs {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
+
+//    @Bean
+//    public AlwaysSampler alwaysSampler() {
+//        return new AlwaysSampler();
+//    }
 }

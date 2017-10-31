@@ -1,6 +1,11 @@
 spring:
   application:
     name: edge-service
+  zipkin:
+    base-url: http://localhost:9411/
+  sleuth:
+    sampler:
+      percentage: 1.0
 
 server:
   port: ${port:8080}

@@ -30,7 +30,7 @@ public class ApiPayServiceApplication {
     @GetMapping("/consumer")
     public String consumer() {
         String result = this.restTemplate.getForObject("http://localhost:8082/message", String.class);
-        log.debug("result: {}", result);
+        log.info("result: {}", result);
         return result;
     }
 }

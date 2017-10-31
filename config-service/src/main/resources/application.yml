@@ -17,7 +17,7 @@ management:
 
 eureka:
   client:
-    registry-fetch-interval-seconds: 5
+#    registry-fetch-interval-seconds: 5
     service-url:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
   instance:

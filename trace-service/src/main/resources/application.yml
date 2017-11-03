@@ -3,7 +3,7 @@ spring:
     name: trace-service
 
 server:
-  port: ${port:9411}
+  port: ${PORT:9411}
 
 management:
   port: ${server.port}

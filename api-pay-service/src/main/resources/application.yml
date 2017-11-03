@@ -8,7 +8,7 @@ spring:
       percentage: 1.0
 
 server:
-  port: ${port:8081}
+  port: ${PORT:8081}
 
 management:
   port: ${server.port}

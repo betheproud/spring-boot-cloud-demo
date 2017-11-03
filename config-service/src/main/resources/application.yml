@@ -13,7 +13,7 @@ spring:
           uri: https://github.com/logan81k/spring-boot-cloud-sample.git
 
 server:
-  port: ${port:8888}
+  port: ${PORT:8888}
 
 management:
   port: ${server.port}

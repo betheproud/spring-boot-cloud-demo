@@ -8,7 +8,7 @@ spring:
       percentage: 1.0
 
 server:
-  port: ${port:8080}
+  port: ${PORT:8080}
 
 management:
   port: ${server.port}
@@ -28,6 +28,12 @@ zuul:
   routes:
     api-user-service: /users/**
     api-pay-service: /pays/**
+#    api-user:
+#      path: /users/**
+#      service-id: api-user-service
+#    api-pay:
+#      path: /pays/**
+#      service-id: api-pay-service
 #    api-user-service:
 #      path: /users/**
 #      url: http://localhost:8080/

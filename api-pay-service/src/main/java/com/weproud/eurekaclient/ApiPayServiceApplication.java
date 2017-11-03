@@ -2,6 +2,8 @@ package com.weproud.eurekaclient;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -14,7 +16,11 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ApiPayServiceApplication {
+public class ApiPayServiceApplication implements CommandLineRunner {
+
+    @Value("${config-service.test}")
+    private String configServiceMessage;
+
     @Autowired
     private RestTemplate restTemplate;
 
@@ -27,10 +33,15 @@ public class ApiPayServiceApplication {
         return "Hello from Api Pay service";
     }
 
-    @GetMapping("/consumer")
+    @GetMapping("/")
     public String consumer() {
-        String result = this.restTemplate.getForObject("http://localhost:8082/message", String.class);
+        String result = this.restTemplate.getForObject("http://api-user-service:8082/message", String.class);
         log.info("result: {}", result);
         return result;
+    }
+
+    @Override
+    public void run(final String... args) throws Exception {
+        log.info("config-service is working: {}", this.configServiceMessage);
     }
 }

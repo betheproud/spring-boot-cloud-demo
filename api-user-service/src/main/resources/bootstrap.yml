@@ -2,7 +2,7 @@ spring:
   cloud:
     config:
       enabled: true
-      name: discovery-service
+      name: api-user-service
       uri: http://localhost:8888
 
 

@@ -1,0 +1,2 @@
+config-service:
+  test: Hello api-pay-service

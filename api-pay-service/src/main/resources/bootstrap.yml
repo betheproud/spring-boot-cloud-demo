@@ -1,29 +1,8 @@
 spring:
-  application:
-    name: api-pay-service
-  zipkin:
-    base-url: http://localhost:9411/
-  sleuth:
-    sampler:
-      percentage: 1.0
   cloud:
     config:
       enabled: true
       name: api-pay-service
       uri: http://localhost:8888
 
-server:
-  port: ${PORT:8081}
 
-management:
-  port: ${server.port}
-  security:
-    enabled: false
-
-eureka:
-  client:
-    registry-fetch-interval-seconds: 5
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-  instance:
-      prefer-ip-address: false

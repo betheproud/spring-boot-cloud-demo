@@ -23,3 +23,6 @@ eureka:
   instance:
       prefer-ip-address: false
 
+logging:
+  level:
+    com.weproud: debug

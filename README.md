@@ -1,3 +1,13 @@
+## How to run
+
+1. Run discovery-service
+2. Run spring-boot-admin-service
+3. Run config-service
+4. Run trace-service
+5. Run edge-service
+6. Run api-user-service and api-pay-service
+
+
 ## spring-boot-cloud sample
 
 see also: https://blog.asarkar.org/technical/netflix-eureka/

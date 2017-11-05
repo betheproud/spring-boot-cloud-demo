@@ -35,7 +35,7 @@ public class ApiPayServiceApplication implements CommandLineRunner {
 
     @GetMapping("/")
     public String consumer() {
-        String result = this.restTemplate.getForObject("http://api-user-service:8082/message", String.class);
+        String result = this.restTemplate.getForObject("http://localhost:8082/message", String.class);
         log.info("result: {}", result);
         return result;
     }

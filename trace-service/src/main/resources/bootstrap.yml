@@ -1,19 +1,9 @@
 spring:
   application:
-    name: api-user-service
-  zipkin:
-    base-url: http://localhost:9411/
-  sleuth:
-    sampler:
-      percentage: 1.0
-  cloud:
-    config:
-      enabled: true
-      name: api-user-service
-      uri: http://localhost:8888
+    name: trace-service
 
 server:
-  port: ${PORT:8082}
+  port: ${PORT:9411}
 
 management:
   port: ${server.port}
@@ -23,7 +13,7 @@ management:
 eureka:
   client:
     registry-fetch-interval-seconds: 5
-    serviceUrl:
+    service-url:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
   instance:
       prefer-ip-address: false

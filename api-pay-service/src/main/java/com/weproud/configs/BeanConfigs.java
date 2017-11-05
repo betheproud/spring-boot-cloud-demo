@@ -1,4 +1,4 @@
-package com.weproud.eurekaclient;
+package com.weproud.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

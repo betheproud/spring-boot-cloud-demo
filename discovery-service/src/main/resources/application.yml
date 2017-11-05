@@ -1,17 +1,3 @@
-spring:
-  application:
-    name: discovery-service
-
-server:
-  port: ${PORT:8761}
-
-management:
-  port: ${server.port}
-  security:
-    enabled: false
-
-eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-
+logging:
+  level:
+    com.weproud: debug

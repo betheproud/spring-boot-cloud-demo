@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/logan81k/spring-boot-cloud-sample.git
+
+server:
+  port: ${PORT:8888}
+
+management:
+  port: ${server.port}
+  security:
+    enabled: false
+
+eureka:
+  client:
+#    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+      prefer-ip-address: false

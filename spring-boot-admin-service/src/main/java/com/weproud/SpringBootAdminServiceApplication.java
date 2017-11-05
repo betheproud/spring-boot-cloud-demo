@@ -1,17 +1,16 @@
-package com.weproud.zipkinservice;
+package com.weproud;
 
+import de.codecentric.boot.admin.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import zipkin.server.EnableZipkinServer;
 
-
-@EnableZipkinServer
 @EnableDiscoveryClient
+@EnableAdminServer
 @SpringBootApplication
-public class TraceServiceApplication {
+public class SpringBootAdminServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TraceServiceApplication.class, args);
+        SpringApplication.run(SpringBootAdminServiceApplication.class, args);
     }
 }

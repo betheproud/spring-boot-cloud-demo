@@ -30,7 +30,11 @@ ext {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
+
+	compile group: 'org.jolokia', name: 'jolokia-core', version: '1.3.7'
+
 	compileOnly('org.projectlombok:lombok')
+
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 

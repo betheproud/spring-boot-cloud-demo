@@ -6,6 +6,11 @@ spring:
   sleuth:
     sampler:
       percentage: 1.0
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/logan81k/spring-boot-cloud-sample.git
 
 server:
   port: ${PORT:8888}

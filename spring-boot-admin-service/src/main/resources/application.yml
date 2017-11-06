@@ -1,6 +1,12 @@
 spring:
   application:
     name: spring-boot-admin-service
+  boot:
+    admin:
+      notify:
+        telegram:
+          chat-id: <your-chat-id>
+          bot-token: <your-bot-token>
 
 server:
   port: ${PORT:8762}

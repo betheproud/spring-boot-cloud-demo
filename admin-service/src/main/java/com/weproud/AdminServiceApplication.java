@@ -8,9 +8,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 @EnableAdminServer
 @SpringBootApplication
-public class SpringBootAdminServiceApplication {
+public class AdminServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootAdminServiceApplication.class, args);
+        SpringApplication.run(AdminServiceApplication.class, args);
     }
 }

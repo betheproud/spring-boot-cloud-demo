@@ -1,15 +1,9 @@
 spring:
   application:
-    name: admin-service
-#  boot:
-#    admin:
-#      notify:
-#        telegram:
-#          chat-id: <your-chat-id>
-#          bot-token: <your-bot-token>
+    name: dashboard-service
 
 server:
-  port: ${PORT:8762}
+  port: ${PORT:8763}
 
 management:
   port: ${server.port}
@@ -24,7 +18,3 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 10
     prefer-ip-address: false
-
-logging:
-  level:
-    com.weproud: debug

@@ -11,6 +11,9 @@ spring:
       server:
         git:
           uri: https://github.com/logan81k/spring-boot-cloud-sample.git
+  boot:
+    admin:
+      url: http://localhost:8762
 
 server:
   port: ${PORT:8888}

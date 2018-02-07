@@ -1,6 +1,9 @@
 spring:
   application:
     name: trace-service
+  boot:
+    admin:
+      url: http://localhost:8762
 
 server:
   port: ${PORT:9411}

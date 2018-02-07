@@ -9,21 +9,21 @@ spring:
 #          bot-token: <your-bot-token>
 
 server:
-  port: ${PORT:8762}
+  port: 8762
 
 management:
   port: ${server.port}
   security:
     enabled: false
-
-eureka:
-  client:
-    registry-fetch-interval-seconds: 5
-    service-url:
-      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761/eureka}
-  instance:
-    lease-renewal-interval-in-seconds: 10
-    prefer-ip-address: false
+#
+#eureka:
+#  client:
+#    registry-fetch-interval-seconds: 5
+#    service-url:
+#      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761/eureka}
+#  instance:
+#    lease-renewal-interval-in-seconds: 10
+#    prefer-ip-address: false
 
 logging:
   level:

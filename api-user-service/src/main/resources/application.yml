@@ -6,6 +6,9 @@ spring:
   sleuth:
     sampler:
       percentage: 1.0
+  boot:
+    admin:
+      url: http://localhost:8762
 
 server:
   port: ${PORT:8082}

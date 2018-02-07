@@ -1,6 +1,9 @@
 spring:
   application:
     name: discovery-service
+  boot:
+    admin:
+      url: http://localhost:8762
 
 server:
   port: ${PORT:8761}
@@ -19,4 +22,6 @@ eureka:
 
 logging:
   level:
+    org.springframework:
+      boot: info
     com.weproud: debug

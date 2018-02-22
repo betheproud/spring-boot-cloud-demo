@@ -15,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Slf4j
 @RestController
+@EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
 public class ApiPayServiceApplication implements CommandLineRunner {

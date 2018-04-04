@@ -1,4 +1,4 @@
-package com.weproud.configs;
+package com.weproud.config;
 
 import com.weproud.notify.TelegramNotifier;
 import de.codecentric.boot.admin.config.NotifierConfiguration;

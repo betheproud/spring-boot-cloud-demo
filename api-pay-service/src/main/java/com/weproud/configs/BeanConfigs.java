@@ -1,4 +1,4 @@
-package com.weproud.configs;
+package com.weproud.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

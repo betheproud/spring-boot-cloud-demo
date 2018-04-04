@@ -27,6 +27,23 @@ eureka:
     lease-renewal-interval-in-seconds: 10
     prefer-ip-address: false
 
+security:
+  oauth2:
+    client:
+      client-id: femto
+      client-secret: femtogames2018
+    resource:
+      id: oauth2-resource
+      token-info-uri: http://localhost:9999/oauth/check_token
+
 logging:
+  file: ${spring.application.name}
   level:
+    org.springframework:
+      web: 'off'
+      data: 'off'
+      jmx: 'off'
+      beans: 'off'
+      boot: info
+      security: info
     com.weproud: debug

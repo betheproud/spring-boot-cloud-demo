@@ -1,4 +1,4 @@
-package com.weproud.configs;
+package com.weproud.config;
 
 import org.springframework.cloud.sleuth.sampler.AlwaysSampler;
 import org.springframework.context.annotation.Bean;

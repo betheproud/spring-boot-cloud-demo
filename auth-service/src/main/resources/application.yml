@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: auth-service
+  boot:
+    admin:
+      url: http://localhost:8762
+
+
+server:
+  port: ${PORT:8181}
+  tomcat:
+    max-threads: 2000
+    max-connections: 20000
+
+management:
+  port: ${server.port}
+  security:
+    enabled: false
+
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761/eureka}
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    prefer-ip-address: false
+
+security:
+  oauth2:
+    authorization:
+      token-key-access: isAuthenticated()
+
+logging:
+  file: ${spring.application.name}
+  level:
+    jdbc:
+      sqltiming: 'off'
+      audit: 'off'
+      connection: 'off'
+      resultset: 'off'
+      resultsettable: 'off'
+      sqlonly: info
+    org.springframework:
+      boot: info
+      web: 'off'
+      data: 'off'
+      jmx: 'off'
+      beans: 'off'
+      security: info
+    com.weproud: debug

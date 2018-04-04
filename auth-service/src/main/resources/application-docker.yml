@@ -1,0 +1,23 @@
+spring:
+  jpa:
+    database: mysql
+    generate-ddl: false
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mysql://127.0.0.1:3306/auth?useUnicode=true&charaterEncoding=utf-8
+    username: test
+    password: test
+    hikari:
+      pool-name: hikari-cp
+      maximum-pool-size: 30
+      minimum-idle: 2
+      max-lifetime: 30000
+
+eureka:
+  client:
+    enabled: false
+

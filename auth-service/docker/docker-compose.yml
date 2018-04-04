@@ -1,0 +1,27 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: mysql-5.7-auth
+    volumes:
+      - "auth-db:/var/lib/mysql"
+      - "./init/:/docker-entrypoint-initdb.d"
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: "auth"
+      MYSQL_USER: "test"
+      MYSQL_PASSWORD: "test"
+      MYSQL_ROOT_PASSWORD: "root"
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+
+#  adminer:
+#    image: adminer
+#    container_name: adminer
+#    ports:
+#      - 8181:8080
+
+volumes:
+  auth-db:
